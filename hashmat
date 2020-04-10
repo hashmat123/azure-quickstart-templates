@@ -1,0 +1,22 @@
+#!/user/local/bin/python
+
+import socket 
+
+
+server_socket = socket.socket()
+server_socket = socket.bin((' ',8000 ))
+server_socket = socket.listen(10)
+ 
+ 
+ while True:
+      client_socket, remote_address = server_socket.accept()
+      try:
+     request = client _ socket.recv(1024)
+     client_socket.send(request.upper())
+     print '{}:{}'.format(client_socket.getpeername(),requst)
+     client_socket.close()
+     except:
+     pass
+     
+     server_socket.close()
+     
